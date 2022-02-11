@@ -25,16 +25,15 @@ function App() {
         {/* display each data in array in a card */}
         {/* each card must have a "key" attribute */}
 
-        {users.map((user) => {
-          return (
-            <div>
-              <p>{user.name}</p>
-              <p>{user.location}</p>
-              <p>{user.car}</p>
-            </div>
-          );
-        })}
+        {users.map((user, index) => (
+          <div key={index}>
+            <p>{user.name}</p>
+            <p>{user.location}</p>
+            <p>{user.car}</p>
+          </div>
+        ))}
       </div>
+
       <ScotchInfoBar />
     </div>
   );
